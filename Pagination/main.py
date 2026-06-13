@@ -18,10 +18,12 @@ def get_orders(
     start = (page  - 1) * limit
     if start >= len(products):
         return {
-            "page": page,
-            "limit": limit,
+            "data": [],
+            "totalItems": len(products),
+            "totalPages": (len(products) + limit - 1) // limit,
+            "currentPage": page,
+            "itemsPerPage": limit,
             "message": "No products found",
-            "data": []
         }
     
     end = start + limit
@@ -31,5 +33,6 @@ def get_orders(
         "totalItems": len(products),
         "totalPages": (len(products) + limit - 1  ) // limit,
         "currentPage": page,
-        "itemsPerPage": limit
+        "itemsPerPage": limit,
+        "message": "Products retrieved successfully",
     }
