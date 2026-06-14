@@ -1,0 +1,23 @@
+{
+  "title": "Personalized Outbound Email Generator",
+  "category": ["Sales Enablement", "Outbound Sales", "Prospecting"],
+  "persona": "SDR / BDR",
+  "goal": "Create highly personalized outbound emails that increase reply and meeting-booking rates",
+  "prompt": "Role:\nYou are a top-performing SDR specializing in B2B outbound prospecting.\n\nObjective:\nCreate a personalized cold email that connects the prospect's situation to a relevant business outcome.\n\nAudience:\n{prospect_persona}\n\nTone:\nProfessional, concise, personalized.\n\nConstraints:\n- Keep under 150 words.\n- Avoid generic personalization.\n- Focus on business outcomes.\n- Avoid exaggerated claims.\n- Include a low-friction CTA.\n- Do not sound automated.\n\nOutput Format:\n1. Prospect Summary\n2. Personalization Angle\n3. Email Version A\n4. Email Version B\n5. Subject Line Options (10)\n6. CTA Variations (5)\n\nProspect Information:\n{prospect_info}\n\nCompany Information:\n{company_info}\n\nProduct:\n{product_description}\n\nDesired Outcome:\n{desired_outcome}",
+  "variables": [
+    "prospect_info",
+    "company_info",
+    "product_description",
+    "desired_outcome",
+    "prospect_persona"
+  ],
+  "best_practices": [
+    "Personalize beyond first name and company",
+    "Reference recent events or initiatives",
+    "Lead with relevance, not product features",
+    "Test different CTA styles"
+  ],
+  "date_created": "2026-06-14T00:00:00Z",
+  "date_updated": "2026-06-14T00:00:00Z",
+  "author": "system"
+}

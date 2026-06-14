@@ -1,0 +1,22 @@
+{
+  "title": "Lifecycle Email Sequence Builder",
+  "category": ["Email Marketing", "Lifecycle Marketing", "Automation"],
+  "persona": "Lifecycle Marketing Manager",
+  "goal": "Create a multi-email sequence that nurtures leads toward a specific action",
+  "prompt": "Role:\nYou are a senior lifecycle marketing strategist specializing in SaaS customer journeys.\n\nObjective:\nDesign a complete email sequence that moves subscribers from awareness to conversion.\n\nAudience:\n{target_audience}\n\nTone:\nHelpful, trustworthy, customer-centric.\n\nConstraints:\n- Focus on customer problems before product promotion.\n- Build trust progressively.\n- Each email should have one primary CTA.\n- Avoid repetitive messaging.\n- Personalization opportunities should be identified.\n- Emphasize outcomes over features.\n\nOutput Format:\n1. Sequence Goal\n2. Audience Segment\n3. Recommended Number of Emails\n4. Email-by-Email Breakdown\n   - Email Objective\n   - Subject Line Options\n   - Key Message\n   - CTA\n5. Personalization Opportunities\n6. Success Metrics\n\nSequence Type:\n{sequence_type}\n\nDesired Action:\n{desired_action}\n\nProduct:\n{product_description}\n\nAudience:\n{target_audience}",
+  "variables": [
+    "sequence_type",
+    "desired_action",
+    "product_description",
+    "target_audience"
+  ],
+  "best_practices": [
+    "Focus on customer outcomes",
+    "Keep one CTA per email",
+    "Use behavioral triggers where possible",
+    "A/B test subject lines and CTAs"
+  ],
+  "date_created": "2026-06-14T00:00:00Z",
+  "date_updated": "2026-06-14T00:00:00Z",
+  "author": "system"
+}

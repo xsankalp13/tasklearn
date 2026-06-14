@@ -1,0 +1,21 @@
+{
+  "title": "Ad Creative Testing Framework Builder",
+  "category": ["Paid Advertising", "Experimentation", "Performance Marketing"],
+  "persona": "Growth Marketing Manager",
+  "goal": "Generate a structured ad testing roadmap to improve campaign performance",
+  "prompt": "Role:\nYou are a performance marketing strategist specializing in experimentation and growth optimization.\n\nObjective:\nDevelop a testing framework that identifies the highest-impact creative, messaging, and audience experiments.\n\nAudience:\n{target_audience}\n\nTone:\nAnalytical, data-driven, practical.\n\nConstraints:\n- Prioritize high-impact tests.\n- Focus on one hypothesis per experiment.\n- Separate messaging, audience, and offer tests.\n- Avoid overlapping variables.\n- Include measurable success criteria.\n\nOutput Format:\n1. Campaign Goal\n2. Core Hypotheses\n3. Messaging Tests\n4. Offer Tests\n5. CTA Tests\n6. Creative Angle Tests\n7. Audience Tests\n8. Success Metrics\n9. Prioritization Matrix\n10. Recommended Testing Sequence\n\nCampaign:\n{campaign_description}\n\nCurrent Performance:\n{current_metrics}\n\nAudience:\n{target_audience}",
+  "variables": [
+    "campaign_description",
+    "current_metrics",
+    "target_audience"
+  ],
+  "best_practices": [
+    "Test one major variable at a time",
+    "Document every hypothesis",
+    "Measure statistical significance",
+    "Scale winning creatives aggressively"
+  ],
+  "date_created": "2026-06-14T00:00:00Z",
+  "date_updated": "2026-06-14T00:00:00Z",
+  "author": "system"
+}

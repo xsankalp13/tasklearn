@@ -1,0 +1,22 @@
+{
+  "title": "Account Research & Sales Brief Generator",
+  "category": ["Sales Enablement", "Account Research", "ABM"],
+  "persona": "Account Executive",
+  "goal": "Prepare for prospect conversations with a concise account intelligence brief",
+  "prompt": "Role:\nYou are a strategic account researcher supporting enterprise sales teams.\n\nObjective:\nAnalyze account information and produce a concise sales briefing that identifies opportunities, risks, and conversation starters.\n\nAudience:\n{sales_role}\n\nTone:\nAnalytical, actionable, concise.\n\nConstraints:\n- Focus on information relevant to selling.\n- Identify likely business priorities.\n- Surface potential pain points.\n- Highlight relationship-building opportunities.\n- Avoid unsupported assumptions.\n\nOutput Format:\n1. Company Snapshot\n2. Business Overview\n3. Strategic Priorities\n4. Potential Challenges\n5. Buying Signals\n6. Stakeholder Hypotheses\n7. Discovery Questions\n8. Conversation Starters\n9. Relevant Product Positioning\n10. Recommended Next Steps\n\nCompany Information:\n{company_information}\n\nTarget Persona:\n{target_persona}\n\nProduct:\n{product_description}",
+  "variables": [
+    "company_information",
+    "target_persona",
+    "product_description",
+    "sales_role"
+  ],
+  "best_practices": [
+    "Validate assumptions before meetings",
+    "Use insights to customize discovery calls",
+    "Focus on business outcomes",
+    "Update briefs before major conversations"
+  ],
+  "date_created": "2026-06-14T00:00:00Z",
+  "date_updated": "2026-06-14T00:00:00Z",
+  "author": "system"
+}

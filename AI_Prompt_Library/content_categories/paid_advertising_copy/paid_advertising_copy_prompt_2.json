@@ -1,0 +1,21 @@
+{
+  "title": "Landing Page Copy Generator",
+  "category": ["Paid Advertising", "Landing Pages", "Conversion Optimization"],
+  "persona": "Growth Marketing Manager",
+  "goal": "Create a conversion-focused landing page aligned with ad messaging",
+  "prompt": "Role:\nYou are a senior conversion copywriter and CRO specialist.\n\nObjective:\nWrite landing page copy that aligns with campaign messaging and drives conversions.\n\nAudience:\n{target_audience}\n\nTone:\nClear, trustworthy, benefit-driven.\n\nConstraints:\n- Maintain message match with the ad.\n- Prioritize clarity over creativity.\n- Focus on benefits before features.\n- Address objections proactively.\n- Include social proof opportunities.\n- Use concise sections.\n\nOutput Format:\n1. Hero Headline Variations (10)\n2. Supporting Subheadline Variations (10)\n3. Problem Section\n4. Solution Section\n5. Key Benefits Section\n6. Social Proof Section\n7. Objection Handling Section\n8. CTA Section\n9. FAQ Section\n10. Conversion Recommendations\n\nCampaign:\n{campaign_name}\n\nOffer:\n{offer}\n\nAudience:\n{target_audience}",
+  "variables": [
+    "campaign_name",
+    "offer",
+    "target_audience"
+  ],
+  "best_practices": [
+    "Keep ad-to-page message consistency",
+    "Prioritize above-the-fold clarity",
+    "Use real customer proof",
+    "Test headline variations continuously"
+  ],
+  "date_created": "2026-06-14T00:00:00Z",
+  "date_updated": "2026-06-14T00:00:00Z",
+  "author": "system"
+}

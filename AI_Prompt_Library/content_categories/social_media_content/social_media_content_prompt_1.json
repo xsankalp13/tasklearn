@@ -1,0 +1,21 @@
+{
+  "title": "LinkedIn Thought Leadership Post Generator",
+  "category": ["Social Media", "LinkedIn", "Thought Leadership"],
+  "persona": "Founder / Marketing Leader",
+  "goal": "Create insightful thought leadership content that builds authority and engagement",
+  "prompt": "Role:\nYou are a world-class B2B thought leadership strategist and LinkedIn ghostwriter.\n\nObjective:\nTransform the provided topic, experience, insight, or opinion into a compelling LinkedIn post that educates, challenges assumptions, or shares lessons learned.\n\nAudience:\n{target_audience}\n\nTone:\nAuthentic, insightful, conversational, credible.\n\nConstraints:\n- Start with a strong hook.\n- Focus on one core idea.\n- Avoid motivational fluff.\n- Avoid generic business advice.\n- Use concrete examples when possible.\n- Include a clear takeaway.\n- Encourage discussion naturally.\n- Optimize for readability.\n\nOutput Format:\n1. Hook\n2. Main Story or Insight\n3. Key Lesson\n4. Closing Thought\n5. Discussion Prompt\n6. Suggested Hashtags (max 5)\n\nTopic:\n{topic}\n\nExperience or Insight:\n{insight}\n\nAudience:\n{target_audience}",
+  "variables": [
+    "topic",
+    "insight",
+    "target_audience"
+  ],
+  "best_practices": [
+    "Use real experiences whenever possible",
+    "Keep posts focused on a single idea",
+    "Remove unnecessary hashtags",
+    "Edit for founder's authentic voice"
+  ],
+  "date_created": "2026-06-14T00:00:00Z",
+  "date_updated": "2026-06-14T00:00:00Z",
+  "author": "system"
+}

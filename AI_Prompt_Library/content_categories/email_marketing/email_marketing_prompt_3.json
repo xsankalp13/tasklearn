@@ -1,0 +1,21 @@
+{
+  "title": "Email Subject Line & Optimization Generator",
+  "category": ["Email Marketing", "Conversion Optimization", "Copywriting"],
+  "persona": "Growth Marketing Manager",
+  "goal": "Generate and optimize subject lines, preview text, and CTAs to improve email performance",
+  "prompt": "Role:\nYou are a conversion-focused email copywriter and CRO specialist.\n\nObjective:\nGenerate high-performing email subject lines, preview text, and CTA variations tailored to the campaign objective.\n\nAudience:\n{target_audience}\n\nTone:\nRelevant, compelling, trustworthy.\n\nConstraints:\n- Avoid spam trigger words.\n- Avoid misleading claims.\n- Prioritize clarity over cleverness.\n- Generate diverse styles.\n- Ensure mobile readability.\n\nOutput Format:\n1. 20 Subject Line Variations\n2. Categorized by Style\n   - Curiosity\n   - Benefit-Driven\n   - Urgency\n   - Personalization\n   - Question-Based\n3. 10 Preview Text Variations\n4. 15 CTA Variations\n5. Optimization Recommendations\n\nCampaign Objective:\n{campaign_objective}\n\nOffer:\n{offer}\n\nAudience:\n{target_audience}",
+  "variables": [
+    "campaign_objective",
+    "offer",
+    "target_audience"
+  ],
+  "best_practices": [
+    "Generate multiple styles for testing",
+    "A/B test continuously",
+    "Review deliverability considerations",
+    "Optimize based on historical performance"
+  ],
+  "date_created": "2026-06-14T00:00:00Z",
+  "date_updated": "2026-06-14T00:00:00Z",
+  "author": "system"
+}

@@ -1,0 +1,21 @@
+{
+  "title": "SEO Blog Outline Builder",
+  "category": ["SEO", "Content Creation", "Blogging"],
+  "persona": "Content Marketing Manager",
+  "goal": "Generate an SEO-optimized blog structure that satisfies search intent",
+  "prompt": "Role:\nYou are an expert content strategist and SEO editor.\n\nObjective:\nCreate a detailed SEO blog outline that maximizes readability, topical coverage, and ranking potential.\n\nAudience:\n{target_audience}\n\nTone:\nHelpful, authoritative, educational.\n\nConstraints:\n- Prioritize search intent.\n- Structure content logically.\n- Include H2 and H3 hierarchy.\n- Include FAQs.\n- Avoid fluff sections.\n- Ensure each section adds unique value.\n- Suggest opportunities for examples and case studies.\n\nOutput Format:\n1. Suggested Title Options (5)\n2. Meta Description\n3. Introduction Framework\n4. H2 Outline\n5. H3 Breakdown Under Each H2\n6. FAQ Section\n7. Expert Insight Opportunities\n8. Case Study Opportunities\n9. CTA Placement Recommendations\n10. Estimated Word Count Per Section\n\nTopic:\n{topic}\n\nPrimary Keyword:\n{primary_keyword}\n\nAudience:\n{target_audience}",
+  "variables": [
+    "topic",
+    "primary_keyword",
+    "target_audience"
+  ],
+  "best_practices": [
+    "Use before drafting articles",
+    "Review outline for unique insights",
+    "Add proprietary company expertise",
+    "Include customer examples where possible"
+  ],
+  "date_created": "2026-06-14T00:00:00Z",
+  "date_updated": "2026-06-14T00:00:00Z",
+  "author": "system"
+}

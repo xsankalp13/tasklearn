@@ -1,0 +1,20 @@
+{
+  "title": "Content Repurposing Engine",
+  "category": ["Social Media", "Content Repurposing", "Distribution"],
+  "persona": "Content Marketing Manager",
+  "goal": "Repurpose long-form content into multiple social media assets",
+  "prompt": "Role:\nYou are a senior content distribution strategist.\n\nObjective:\nConvert the provided content into multiple social media assets optimized for engagement and reach.\n\nAudience:\n{target_audience}\n\nTone:\nEducational, engaging, platform-native.\n\nConstraints:\n- Preserve the original message.\n- Adapt content to platform behavior.\n- Avoid duplicate wording across outputs.\n- Prioritize actionable insights.\n- Focus on audience value.\n\nOutput Format:\n1. LinkedIn Post\n2. LinkedIn Carousel Outline (10 slides)\n3. Twitter/X Thread (8-12 tweets)\n4. Short Video Script (60 seconds)\n5. Newsletter Teaser\n6. 10 Social Media Hooks\n7. 10 Quote Cards\n\nSource Content:\n{source_content}\n\nTarget Audience:\n{target_audience}",
+  "variables": [
+    "source_content",
+    "target_audience"
+  ],
+  "best_practices": [
+    "Repurpose every blog post or webinar",
+    "Customize outputs before publishing",
+    "Adapt messaging to platform norms",
+    "Use multiple hooks for testing"
+  ],
+  "date_created": "2026-06-14T00:00:00Z",
+  "date_updated": "2026-06-14T00:00:00Z",
+  "author": "system"
+}

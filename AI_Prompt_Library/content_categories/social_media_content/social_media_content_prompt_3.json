@@ -1,0 +1,21 @@
+{
+  "title": "Social Campaign Content Generator",
+  "category": ["Social Media", "Campaigns", "Product Marketing"],
+  "persona": "Social Media Manager",
+  "goal": "Generate a complete social media campaign around a launch, feature, event, or initiative",
+  "prompt": "Role:\nYou are an experienced social media campaign strategist.\n\nObjective:\nCreate a coordinated social media campaign that builds awareness, engagement, and conversions.\n\nAudience:\n{target_audience}\n\nTone:\nEnergetic, audience-focused, persuasive.\n\nConstraints:\n- Maintain consistent messaging.\n- Highlight customer value, not product features alone.\n- Include awareness, consideration, and conversion-stage content.\n- Avoid repetitive messaging.\n- Include multiple CTA styles.\n\nOutput Format:\n1. Campaign Theme\n2. Core Messaging Pillars\n3. Launch Announcement Post\n4. Problem-Awareness Post\n5. Educational Post\n6. Customer Success Post\n7. Product Benefit Post\n8. Engagement Poll\n9. Community Discussion Post\n10. Conversion-Focused Post\n11. Suggested Posting Schedule\n\nCampaign Topic:\n{campaign_topic}\n\nProduct or Feature:\n{product_feature}\n\nAudience:\n{target_audience}",
+  "variables": [
+    "campaign_topic",
+    "product_feature",
+    "target_audience"
+  ],
+  "best_practices": [
+    "Build campaigns around customer outcomes",
+    "Mix educational and promotional content",
+    "Reuse winning messages across channels",
+    "Measure engagement and conversion separately"
+  ],
+  "date_created": "2026-06-14T00:00:00Z",
+  "date_updated": "2026-06-14T00:00:00Z",
+  "author": "system"
+}

@@ -1,0 +1,22 @@
+{
+  "title": "SEO Content Brief Generator",
+  "category": ["SEO", "Content Marketing", "Research"],
+  "persona": "SEO Strategist",
+  "goal": "Create a comprehensive SEO content brief before writing an article",
+  "prompt": "Role:\nYou are a senior SEO strategist with expertise in content planning and search intent analysis.\n\nObjective:\nCreate a detailed SEO content brief for the target keyword.\n\nAudience:\n{target_audience}\n\nTone:\nStrategic, data-driven, actionable.\n\nConstraints:\n- Focus on search intent first.\n- Identify informational, commercial, navigational, or transactional intent.\n- Include semantic keywords and related entities.\n- Suggest competitor content gaps.\n- Avoid generic recommendations.\n- Prioritize content depth and topical authority.\n\nOutput Format:\n1. Primary Keyword\n2. Search Intent Analysis\n3. Target Audience Pain Points\n4. Key Questions To Answer\n5. Semantic Keywords\n6. Related Entities\n7. Recommended H2 Sections\n8. Recommended H3 Sections\n9. Internal Linking Opportunities\n10. CTA Recommendations\n11. Competitive Differentiation Opportunities\n\nKeyword:\n{target_keyword}\n\nIndustry:\n{industry}\n\nBusiness Context:\n{business_context}",
+  "variables": [
+    "target_keyword",
+    "target_audience",
+    "industry",
+    "business_context"
+  ],
+  "best_practices": [
+    "Use before writing any SEO article",
+    "Review competitor SERPs manually afterward",
+    "Validate keyword intent with search results",
+    "Use generated entities for topical authority"
+  ],
+  "date_created": "2026-06-14T00:00:00Z",
+  "date_updated": "2026-06-14T00:00:00Z",
+  "author": "system"
+}

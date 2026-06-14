@@ -1,0 +1,21 @@
+{
+  "title": "Multi-Channel Ad Copy Generator",
+  "category": ["Paid Advertising", "Copywriting", "Demand Generation"],
+  "persona": "Performance Marketing Manager",
+  "goal": "Generate high-converting ad copy variations for multiple paid acquisition channels",
+  "prompt": "Role:\nYou are a senior performance marketer specializing in SaaS demand generation.\n\nObjective:\nCreate multiple ad copy variations optimized for conversions across different advertising platforms.\n\nAudience:\n{target_audience}\n\nTone:\nPersuasive, clear, customer-focused.\n\nConstraints:\n- Focus on customer outcomes.\n- Avoid vague claims.\n- Avoid excessive hype.\n- Highlight differentiation.\n- Include emotional and rational triggers.\n- Ensure compliance with advertising policies.\n\nOutput Format:\n1. Core Messaging Angles\n2. Google Search Ads\n   - 20 Headlines\n   - 10 Descriptions\n3. LinkedIn Ads\n   - 10 Variations\n4. Meta Ads\n   - 10 Variations\n5. Retargeting Ads\n   - 10 Variations\n6. CTA Variations\n7. Recommended Testing Priorities\n\nProduct:\n{product_description}\n\nOffer:\n{offer}\n\nAudience:\n{target_audience}",
+  "variables": [
+    "product_description",
+    "offer",
+    "target_audience"
+  ],
+  "best_practices": [
+    "Test one variable at a time",
+    "Lead with customer outcomes",
+    "Create separate messaging by audience segment",
+    "Refresh creatives regularly"
+  ],
+  "date_created": "2026-06-14T00:00:00Z",
+  "date_updated": "2026-06-14T00:00:00Z",
+  "author": "system"
+}

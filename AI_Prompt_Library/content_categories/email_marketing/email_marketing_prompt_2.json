@@ -1,0 +1,21 @@
+{
+  "title": "Newsletter Creator",
+  "category": ["Email Marketing", "Newsletter", "Audience Engagement"],
+  "persona": "Content Marketing Manager",
+  "goal": "Create a valuable newsletter that educates, engages, and builds audience trust",
+  "prompt": "Role:\nYou are an expert B2B newsletter editor.\n\nObjective:\nCreate a newsletter that delivers practical value while strengthening brand authority.\n\nAudience:\n{target_audience}\n\nTone:\nInsightful, concise, conversational.\n\nConstraints:\n- Prioritize audience value over promotion.\n- Highlight actionable insights.\n- Avoid clickbait.\n- Include only one promotional section.\n- Ensure readability on mobile devices.\n\nOutput Format:\n1. Newsletter Title\n2. Subject Line Options (10)\n3. Preview Text Options (5)\n4. Opening Note\n5. Key Insight or Story\n6. Industry Trends Section\n7. Recommended Resources\n8. Promotional Section\n9. Closing CTA\n\nTheme:\n{newsletter_theme}\n\nKey Topics:\n{key_topics}\n\nAudience:\n{target_audience}",
+  "variables": [
+    "newsletter_theme",
+    "key_topics",
+    "target_audience"
+  ],
+  "best_practices": [
+    "Deliver value before asking for action",
+    "Use a consistent newsletter structure",
+    "Keep promotional content minimal",
+    "Track clicks by content section"
+  ],
+  "date_created": "2026-06-14T00:00:00Z",
+  "date_updated": "2026-06-14T00:00:00Z",
+  "author": "system"
+}
