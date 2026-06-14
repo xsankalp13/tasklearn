@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Content Generator</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f4f4;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background: #2563eb;
+            color: white;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        .output {
+            margin-top: 24px;
+        }
+
+        #result {
+            min-height: 200px;
+            white-space: pre-wrap;
+            background: #fafafa;
+            border: 1px solid #ddd;
+            padding: 16px;
+            border-radius: 8px;
+        }
+
+        .loading {
+            text-align: center;
+            margin-top: 10px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>AI Content Generator</h1>
+
+    <div class="form-group">
+        <label for="topic">Topic</label>
+        <input
+            type="text"
+            id="topic"
+            placeholder="e.g. Artificial Intelligence in Marketing"
+        >
+    </div>
+
+    <div class="form-group">
+        <label for="contentType">Content Type</label>
+        <select id="contentType">
+            <option value="Instagram caption">Instagram Caption</option>
+            <option value="Twitter Thread Idea">Twitter Thread Idea</option>
+            <option value="LinkedIn Post">LinkedIn Post</option>
+            <option value="Short Blog Post Outline">Short Blog Post Outline</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="model">Model</label>
+        <select id="model">
+            <option value="gemini-3.5-flash">gemini-3.5-flash</option>
+            <option value="gemini-3.1-flash-lite">gemini-3.1-flash-lite</option>
+            <option value="gemini-3.1-flash">gemini-3.1-flash</option>
+            <option value="gemini-3.0-flash">gemini-3.0-flash</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="maxTokens">Max Tokens</label>
+        <input
+            type="number"
+            id="maxTokens"
+            value="500"
+            min="50"
+            max="2048"
+        >
+    </div>
+
+    <div class="form-group">
+        <label for="temperature">
+            Temperature:
+            <span id="tempValue">0.7</span>
+        </label>
+        <input
+            type="range"
+            id="temperature"
+            min="0"
+            max="2"
+            step="0.1"
+            value="0.7"
+        >
+    </div>
+
+    <button onclick="generateContent()">
+        Generate Content
+    </button>
+
+    <div class="loading" id="loading"></div>
+
+    <div class="output">
+        <h2>Generated Content</h2>
+        <div id="result"></div>
+    </div>
+</div>
+
+<script>
+    const tempSlider = document.getElementById("temperature");
+    const tempValue = document.getElementById("tempValue");
+
+    tempSlider.addEventListener("input", () => {
+        tempValue.textContent = tempSlider.value;
+    });
+
+    async function generateContent() {
+        const topic = document.getElementById("topic").value.trim();
+        const contentType = document.getElementById("contentType").value;
+        const model = document.getElementById("model").value;
+        const maxTokens = Number(document.getElementById("maxTokens").value);
+        const temperature = Number(document.getElementById("temperature").value);
+
+        if (!topic) {
+            alert("Please enter a topic.");
+            return;
+        }
+
+        const loading = document.getElementById("loading");
+        const result = document.getElementById("result");
+
+        loading.innerText = "Generating content...";
+        result.innerText = "";
+
+        try {
+            const response = await fetch(
+                "http://localhost:8000/generate",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        topic,
+                        content_type: contentType,
+                        model,
+                        max_tokens: maxTokens,
+                        temperature
+                    })
+                }
+            );
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(
+                    data.detail || "Failed to generate content"
+                );
+            }
+
+            result.innerText = data.generated_content;
+        }
+        catch (error) {
+            result.innerText = "Error: " + error.message;
+        }
+        finally {
+            loading.innerText = "";
+        }
+    }
+</script>
+
+</body>
+</html>
