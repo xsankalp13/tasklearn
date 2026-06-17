@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gemini Streaming Chat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        #prompt {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+        }
+
+        #response {
+            margin-top: 20px;
+            white-space: pre-wrap;
+            border: 1px solid #ddd;
+            padding: 15px;
+            min-height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Gemini SSE Demo</h2>
+
+    <input
+        id="prompt"
+        type="text"
+        placeholder="Ask something..."
+    />
+
+    <button onclick="sendPrompt()">
+        Send
+    </button>
+
+    <div id="response"></div>
+
+    <script>
+
+        function sendPrompt() {
+
+            const prompt =
+                document.getElementById("prompt").value;
+
+            const responseDiv =
+                document.getElementById("response");
+
+            responseDiv.textContent = "";
+
+            const url =
+                `/stream?prompt=${encodeURIComponent(prompt)}`;
+
+            const eventSource =
+                new EventSource(url);
+
+            eventSource.onmessage = (event) => {
+
+                try {
+
+                    const data =
+                        JSON.parse(event.data);
+
+                    if (data.type === "token") {
+                        responseDiv.textContent += data.content;
+                    }
+
+                    if (data.type === "done") {
+                        eventSource.close();
+                    }
+
+                } catch {
+
+                    responseDiv.textContent += event.data;
+                }
+            };
+
+            eventSource.addEventListener(
+                "done",
+                () => {
+                    eventSource.close();
+                }
+            );
+
+            eventSource.onerror = (err) => {
+                console.error(err);
+                eventSource.close();
+            };
+        }
+
+    </script>
+
+</body>
+</html>
